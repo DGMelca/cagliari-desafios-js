@@ -23,3 +23,19 @@ function descuentoPromo (precioFinal, voucher) {
 }
 descuentoPromo(precioFinal,voucher);
 alert(`Felicidades! Aplicaste tu voucher, el producto te queda a $ ${precioPromo}.`);
+
+
+/* Desafio complementario */
+
+// Calcular cantidad de cuotas
+
+let financiacion = 0;
+let cuotas = prompt ("Ingresá la cantidad de cuotas que desea:");
+
+function calcularCuotas (precioPromo, cuotas) {
+    financiacion = precioPromo / cuotas;
+}
+calcularCuotas(precioPromo,cuotas);
+if (cuotas <=12){
+    console.log(`Tu producto queda financiado en ${cuotas} cuotas de $ ${financiacion}.`);
+}else console.log("Disculpá, la cantidad de coutas es superior al permitido.");
