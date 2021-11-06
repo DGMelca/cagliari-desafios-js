@@ -1,42 +1,25 @@
-/* Algoritmo 1 
 
-for (let i = 1; i <= 10; i++) {
-    let equipo = prompt("Ingresá tu equipo de futbol favorito");
+/* Desafio4  */
 
-    alert(`Tu equipo es ${equipo} y quedó en el puesto ${i}`);    
+//Calcular IVA
+
+alert("Comprá tu producto favorito");
+
+let precioFinal = 0;
+
+function agregarIva (precioInicial, iva) {
+    precioFinal = precioInicial * iva;
 }
+agregarIva(200,1.21);
+alert(`El producto sale $ ${precioFinal}, compralo YA`);
 
-*/
+//Aplicar descuentos
 
-/* Algoritmo 2 */
+let precioPromo = 0;
+let voucher = prompt ("Ingresá tu voucher de descuento");
 
-let equipo = prompt("Ingresá tu equipo favorito, puede ser A o B");
-let equipoA = 0;
-let equipoB = 0;
-
-while(equipo != "ESC"){
-
-    if( equipo == "a" || equipo == "A"){
-        equipoA = equipoA +1;
-    
-    } else if( equipo == "b" || equipo == "B"){
-        equipoB = equipoB +1;
-
-    } else {
-        console.log("Sin votar");
-    }
-
-    equipo = prompt("Ingresá tu equipo favorito, puede ser A o B");
-
+function descuentoPromo (precioFinal, voucher) {
+    precioPromo = precioFinal - voucher;
 }
-
-console.log("equipoA tiene " + equipoA);
-console.log("equipoB tiene " + equipoB);
-
-if( equipoA > equipoB ){
-    console.log("Ganó el equipo A");
-} else if ( equipoA == equipoB) {
-    console.log("Empate");
-} else{
-    console.log("Ganó el equipo B");
-}
+descuentoPromo(precioFinal,voucher);
+alert(`Felicidades! Aplicaste tu voucher, el producto te queda a $ ${precioPromo}.`);

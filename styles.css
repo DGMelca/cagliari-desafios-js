@@ -1,0 +1,32 @@
+*{
+    background-color:#F9F1ED);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 15%;
+    margin: 1%;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: coral;
+    font-size: 1rem;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 1%;
+    color: grey;
+    background-color: bisque ;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: medium;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
