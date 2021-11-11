@@ -1,5 +1,3 @@
-/* Desafio 5 */
-
 class producto{
 
     constructor (nombre, descripcion, precio, stock){
@@ -20,8 +18,7 @@ class producto{
     
 }
 
-
-
+/*
 const shampooSolido = new producto('Shampoo Sólido', 'Aceite esencial de menta, ideal para cabellos grasos', 350, 100);
 console.log(shampooSolido);
 
@@ -39,8 +36,39 @@ console.log(jabonCorporal);
 
 jabonCorporal.comprar();
 jabonCorporal.iva();
+*/
+
+/* Desafio 6 */
+
+let listaDeProductos = [
+    {
+        nombre: "Shampoo Sólido",
+        descripcion: "Aceite esencial de menta, ideal para cabellos grasos",
+        precio: 350,
+        stock: 100
+    },
+    {
+        nombre: "Acondicionador Sólido",
+        descripcion: "Acción desenredante para todo tipo de cabellos",
+        precio: 380,
+        stock: 50
+    },   
+    {
+        nombre: "Jabón corporal",
+        descripcion: "Cremoso y exfoliante, ideal para uso cotidiano",
+        precio: 200,
+        stock: 20
+    }
+]
+
+console.log(listaDeProductos);
+
+let buscar = listaDeProductos.find(listaDeProductos => listaDeProductos.stock <= 20);
+console.log(buscar);
 
 
+
+/*
 //Aplicar descuentos
 
 alert('Sumá tus productos favoritos');
@@ -67,6 +95,9 @@ function calcularCuotas (precioPromo, cuotas) {
     }
 
 financiacion = calcularCuotas(precioPromo,cuotas);
-if (cuotas <=12){
-    console.log(`Tu producto queda financiado en ${cuotas} cuotas de $ ${financiacion}.`);
-}else console.log("Disculpá, la cantidad de coutas es superior al permitido.");
+    if (cuotas <=12){
+        console.log(`Tu producto queda financiado en ${cuotas} cuotas de $ ${financiacion}.`);
+    }else console.log("Disculpá, la cantidad de coutas es superior al permitido.");
+
+*/
+
