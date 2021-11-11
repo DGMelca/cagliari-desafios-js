@@ -66,6 +66,28 @@ console.log(listaDeProductos);
 let buscar = listaDeProductos.find(listaDeProductos => listaDeProductos.stock <= 20);
 console.log(buscar);
 
+/* Desafio 6 complementario*/
+
+class usuario{
+    constructor (cliente, edad){
+        this.cliente = cliente;
+        this.edad = edad;
+    }
+}
+
+let listaDeUsuarios = [];
+
+for( let i=0 ; i < 2 ; i++){
+    let cliente = prompt("Ingresá tu nombre de cliente");
+    let edad = parseInt(prompt("Ingresá tu edad"));
+
+    listaDeUsuarios.push( new usuario(cliente, edad));
+
+}
+
+console.log(listaDeUsuarios);
+
+
 
 
 /*
