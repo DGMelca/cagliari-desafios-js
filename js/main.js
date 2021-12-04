@@ -57,9 +57,9 @@ listaDeProductos.forEach((producto) => {
                                     <p class="card-price">$${producto.precio}</p>
                                 </div>
                             </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#")">Agregar al carrito</a>
+                            <div class="card-footer border-2">
+                                <div class="text-center mt-auto">
+                                <button class="btn border border-3" id="btnComprar" onclick="agregarAlCarrito('${producto.nombre}');">Agregar al carrito</button>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,33 @@ listaDeProductos.forEach((producto) => {
 
 document.getElementById("galeria").innerHTML = acumulador;
 
-console.log(listaDeProductos);
+
+
+let carrito = [];
+if(carrito != null){
+    document.getElementById("contador").innerHTML = carrito.length;
+}
+
+function agregarAlCarrito(nombre){
+    const productoAgregado = listaDeProductos.find(producto => producto.nombre === nombre);
+    if(productoAgregado != undefined){
+        carrito.push(carrito);
+    } else{
+        alert("Error");
+    }
+
+    document.getElementById("contador").innerHTML = carrito.length;
+}
+
+
+let btnCarrito = document.getElementById("carrito");
+btnCarrito.onclick = () => {console.log(carrito)};
+
+
+
+
+
+
 
 
 
